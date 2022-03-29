@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <link rel="stylesheet" href="/static/css/inicio.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Rede de Apartamentos  Tales Lima</h1>
+        <footer>
+            <section class="endereco" >
+                <a href="" class="link">Rua: Dr Silva Mariz</a>
+                <a href="" class="link">Bairro: Centro</a>
+                <a href="" class="link">Cidade: Sousa - PB</a>
+            </section>
+            <section class="contato" >
+                <a href="" class="link">Instagram</a>
+                <a href="" class="link">WhatsApp</a>
+                <a href="" class="link">Telefone</a>
+            </section>
+        </footer>
+    </header>
+    <main>
+        <section id="main-container">
+            <form method="post" >
+                <h2>Editar Apartamento</h2>
+                {% csrf_token %}
+        
+                {{form.as_p}}
+                <button class="bnt" type="submit">Salvar</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

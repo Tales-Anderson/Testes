@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    height: 100%;
+    width: 30%;
+    background: url('/static/img/predio.jpg');
+    background-size: cover;
+    text-align: center;
+    border-right: 2px outset rgb(31, 30, 30);
+    position: relative;
+}.header-title{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background: rgb(3, 6, 10);
+}
+.contato{
+    width: 100%;
+    color: white;
+    padding: 20px;
+    background: rgb(3, 6, 10);
+    display: flex;
+    justify-content: space-around;
+}
+.endereco{
+    width: 100%;
+    color: white;
+    padding: 20px;
+    background: rgb(3, 6, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    height: 100%;
+    width: 70%;
+    background: rgb(248, 248, 248);
+    background: rgb(8, 8, 17);
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#main-container{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: inline-block;
+}
+.main-container-title{
+    margin: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    width: 70%;
+    margin: 10px auto;
+    border: 2px outset rgb(0, 0, 0);
+    box-shadow: 0 0 10px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgb(236, 236, 236);
+}
+.ap > .img{
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.img > .foto{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background: silver;
+    object-fit: cover;
+}
+.ap > .detalhes{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(8, 8, 8);
+}
+.img::-webkit-scrollbar{
+    background: white;
+    height: 10px;
+}
+/* .img::-webkit-scrollbar-track{
+    background: #333;
+} */
+.img::-webkit-scrollbar-thumb{
+    background: rgb(15, 15, 15);
+    border-radius: 4px;
+}
+.detalhes > ul{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 20px;
+}
+.detalhes > p{
+    display: inline-block;
+    text-align: justify;
+    height: 50%;
+    width: 80%;
+}
+.detalhes > form{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 20px;
+}
+form > input, textarea{
+    border-radius: 6px;
+    padding: 1px;
+    text-align: center;
+}
+.detalhes > textarea{
+    display: inline-block;
+    text-align: justify;
+    height: 40%;
+    width: 80%;
+}
+.bnt{
+    height: 10%;
+    width: 30%;
+    text-decoration: none;
+    background: #444;
+    border-radius: 6px;
+    border: 1px outset silver;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+#logar{
+    position: absolute;
+    top: 0;
+    right: 20;
+    padding: 7px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+}
+#cadastrar{
+    position: absolute;
+    top: 45px;
+    right: 20;
+    padding: 7px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 80px;
+    text-decoration: none;
+}
+#logar:hover ,#cadastrar:hover, .bnt:hover{
+    color: rgb(121, 151, 151);
+    opacity: .9;
+}
+#login{
+    position: relative;
+    width: 70%;
+    height: 150px;
+    border: 3px solid black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30% auto;
+    background: white;
+}
+#login input{
+    padding: 2px 30px;
+}
+#login .bnt{
+    height: 23px;
+}
+#fecha{
+    color: red;
+    background: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#fecha:hover{
+    color: orangered;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/inicio.css">
+    <title>XXXXX</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Rede de Apartamentos  Tales Lima</h1>
+        <footer>
+            <section class="endereco" >
+                <a href="" class="link">Rua: Dr Silva Mariz</a>
+                <a href="" class="link">Bairro: Centro</a>
+                <a href="" class="link">Cidade: Sousa - PB</a>
+            </section>
+            <section class="contato" >
+                <a href="" class="link">Instagram</a>
+                <a href="" class="link">WhatsApp</a>
+                <a href="" class="link">Telefone</a>
+            </section>
+        </footer>
+    </header>
+    <main>
+        <a href="{% url 'url_home' %}" id="logar">Sair</a>
+        <a href="{% url 'url_novoApartamento' %}" id="cadastrar">Cadastrar</a>
+        <section id="main-container">
+            <h2 class="main-container-title">Apartamentos Disponiveis</h2>
+
+            {% for apartamento in apartamentos %}
+
+            <div class="ap">
+                <div class="detalhes">
+                    <ul>
+                        <li><span>Valor: </span> {{apartamento.valor}}</li>
+                        <li><span>Andar: </span> {{apartamento.andar}}</li>
+                        <li><span>Quartos: </span> {{apartamento.qtdQuartos}}</li>
+                        <li><span>Banheiros: </span> {{apartamento.qtdBanheiros}}</li>
+                        <li><span>Disponível: Sim</span></li>     
+                    </ul>
+                    <p>
+                        Descrição: {{apartamento.descricao}}
+                    </p>
+                
+            
+                        <a href="{% url 'url_update' apartamento.pk %}" class="bnt">editar</a>
+                    <a href="{% url 'url_delete' apartamento.pk %}" class="bnt">apagar</a>
+                    </div>
+                    
+                </div>    
+                {% endfor %}            
+        </section>
+    </main>
+</body>
+</html>
